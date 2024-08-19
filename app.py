@@ -71,7 +71,7 @@ def handle_question(question):
 
 def main():
     load_dotenv()
-    st.set_page_config(page_title="Chat with InsightBot - generate quick insights from multiple PDFs",page_icon=":books:")
+    st.set_page_config(page_title="Chat with InsightBot - generate quick insights from multiple documents",page_icon=":books:")
     st.write(css,unsafe_allow_html=True)
     if "conversation" not in st.session_state:
         st.session_state.conversation=None
@@ -79,7 +79,7 @@ def main():
     if "chat_history" not in st.session_state:
         st.session_state.chat_history=None
     
-    st.header("Chat with InsightBot - generate quick insights from multiple PDFs :books:")
+    st.header("Chat with InsightBot - generate quick insights from multiple documents :books:")
     question=st.text_input("Ask questions from your documents:")
     if question:
         handle_question(question)
